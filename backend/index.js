@@ -36,11 +36,13 @@ app.use(cors({
     'http://127.0.0.1:5173',
     'http://localhost:5174',
     'http://127.0.0.1:5174',
+    'https://aurafitfront.onrender.com',
     /^http:\/\/192\.168\.\d+\.\d+:\d+$/, // Allow any local network IP
     /^http:\/\/10\.\d+\.\d+\.\d+:\d+$/, // Allow private network IPs
   ],
   credentials: true,
 }));
+
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
